@@ -12,10 +12,7 @@ const FormSignup = ({ submitForm }) => {
   return (
     <div className="form-content">
       <form onSubmit={handleSubmit} className="form" noValidate>
-        <h1>
-          Get started with us today! Create your account by filling out the
-          information below.
-        </h1>
+        <h1>ELOGROUP!!</h1>
         <div className="form-inputs">
           <label className="form-label">Usuário</label>
           <input
