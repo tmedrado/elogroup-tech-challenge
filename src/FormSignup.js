@@ -12,9 +12,11 @@ const FormSignup = ({ submitForm }) => {
   return (
     <div className="form-content">
       <form onSubmit={handleSubmit} className="form" noValidate>
-        <h1>ELOGROUP!!</h1>
+        <div className="form-image">
+          <img src="logoElogroup.png" />
+        </div>
         <div className="form-inputs">
-          <label className="form-label">Usuário</label>
+          <label className="form-label">Usuário *</label>
           <input
             className="form-input"
             type="text"
@@ -26,7 +28,7 @@ const FormSignup = ({ submitForm }) => {
           {errors.username && <p>{errors.username}</p>}
         </div>
         <div className="form-inputs">
-          <label className="form-label">Password</label>
+          <label className="form-label">Password *</label>
           <input
             className="form-input"
             type="password"
@@ -38,7 +40,7 @@ const FormSignup = ({ submitForm }) => {
           {errors.password && <p>{errors.password}</p>}
         </div>
         <div className="form-inputs">
-          <label className="form-label">Confirmação Password</label>
+          <label className="form-label">Confirmação Password *</label>
           <input
             className="form-input"
             type="password"
