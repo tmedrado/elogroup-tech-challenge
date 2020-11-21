@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.css";
-import Form from "./Form";
+import Form from "./Form/Form";
+import GridSystem from "./GridSystem";
 
 function App() {
-  return <Form />;
+  return <GridSystem />;
 }
 
 export default App;
