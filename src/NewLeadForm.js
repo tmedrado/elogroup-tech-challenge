@@ -1,9 +1,11 @@
 import React from "react";
-import "./GridSystem.css";
+import "./LeadsPanel.css";
 import Table from "react-bootstrap/Table";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const NewLeadForm = () => {
+const NewLeadForm = ({ setShowNewLeadForm, setLeads, leads }) => {
+  const [newLead, setNewLead] = React.useState({ step: 1 });
+
   return (
     <div className="lead-form-container">
       <div>
@@ -14,9 +16,10 @@ const NewLeadForm = () => {
           <label className="form-label">Nome *</label>
           <input
             className="form-input"
-            type="text"
-            name="nome"
             placeholder="Coloque o nome"
+            onChange={(event) =>
+              setNewLead({ ...newLead, name: event.target.value })
+            }
           />
         </div>
         <div className="form-inputs">
@@ -76,6 +79,14 @@ const NewLeadForm = () => {
               </tr>
             </tbody>
           </Table>
+          <button
+            onClick={() => {
+              setLeads(leads.concat(newLead));
+              setShowNewLeadForm(false);
+            }}
+          >
+            Criar Lead
+          </button>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 import FormSignup from "./FormSignup";
-import GridSystem from "../GridSystem";
+import LeadsPanel from "../LeadsPanel";
 
 const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -14,7 +14,7 @@ const Form = () => {
           <FormSignup submitForm={() => setIsSubmitted(true)} />
         </div>
       ) : (
-        <GridSystem />
+        <LeadsPanel />
       )}
     </>
   );
