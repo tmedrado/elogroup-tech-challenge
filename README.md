@@ -1,7 +1,7 @@
 # Elogroup Tech Challenge !
 
 Esse projeto foi feito por Tomaz Medrado Dias Silveira, inscrito no Processo Seletivo para a equipe de Tech da Elogroup. 
-Abaixo, temos as instruções, screenshots do projeto pronto e uma sessão de explicações acerca das decisões tomadas tecnicamente.
+Abaixo, temos as instruções, screenshots do projeto e uma sessão de explicações acerca das decisões tomadas tecnicamente.
 Espero que gostem ;)
 
 
@@ -15,4 +15,9 @@ Depois disso, lance o server com:
 
 ### `yarn start`
 
-## Fotos Projeto Pronto:
+## Screenshots:
+
+## Decisões Tomadas:
+
+1) 
+
