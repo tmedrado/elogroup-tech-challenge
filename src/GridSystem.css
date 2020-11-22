@@ -6,4 +6,26 @@
   border-radius: 10px;
   height: 600px;
   display: grid;
+  padding: 50px;
+}
+
+.lead-form-container {
+  margin: 100px auto;
+  width: 900px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+  height: 600px;
+  display: grid;
+  padding: 50px;
+}
+
+.form-inputs2 {
+  margin-bottom: 0.5rem;
+  width: 40%;
+}
+.table-content {
+  position: relative;
+  float: right;
+  width: 50%;
 }

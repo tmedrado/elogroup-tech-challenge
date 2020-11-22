@@ -8,6 +8,9 @@ const GridSystem = () => {
     <div className="grid-container">
       <div>
         <h3>Painel de Leads</h3>
+        <hr></hr>
+        <button> Novo Lead</button>
+        <p></p>
         <Table striped bordered size="lg">
           <thead>
             <tr>
