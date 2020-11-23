@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 import NewLeadForm from "./NewLeadForm";
 import "./LeadsPanel.css";
 import { ToastContainer } from "react-toastify";
@@ -33,8 +33,19 @@ const LeadsPanel = () => {
           />
         ) : (
           <>
-            <h3>Painel de Leads</h3>
+            <Row>
+              <Col>
+                <div className="logo-div">
+                  <img src="logoElogroup.png" />
+                </div>
+              </Col>
+              <Col className="panel-and-leadsform-title ">
+                <h3>Painel de Leads</h3>
+              </Col>
+            </Row>
+
             <hr />
+
             <Button
               id="button"
               onClick={() => setShowNewLeadForm(true)}

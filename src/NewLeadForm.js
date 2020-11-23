@@ -47,10 +47,16 @@ const NewLeadForm = ({ setShowNewLeadForm, setLeads, leads }) => {
 
   return (
     <div className="lead-form-container">
-      <div>
-        <h3>New Lead </h3>
-      </div>
       <Row>
+        <Col className="logo-div">
+          <img src="logoElogroup.png" />
+        </Col>
+        <Col className="panel-and-leadsform-title ">
+          <h3>Novo Lead</h3>
+        </Col>
+      </Row>
+      <hr />
+      <Row className="form-content">
         <Col>
           <div className="form-inputs">
             <label className="form-label">Nome *</label>
