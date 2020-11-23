@@ -3,7 +3,7 @@ import "./LeadsPanel.css";
 import Table from "react-bootstrap/Table";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Row, Button, Alert } from "react-bootstrap";
-import Checkbox from "./Checkbox";
+import Checkbox from "../Checkbox/Checkbox";
 import validateNewLeadInfo from "./validateNewLeadInfo";
 import { toast } from "react-toastify";
 

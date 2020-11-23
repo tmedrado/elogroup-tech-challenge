@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 import FormSignup from "./FormSignup";
-import LeadsPanel from "../LeadsPanel";
+import LeadsPanel from "../LeadsPanel/LeadsPanel";
 
 const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
