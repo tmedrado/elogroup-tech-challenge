@@ -48,7 +48,7 @@
   width: 100%;
   margin: 0rem 3rem 3rem 3rem;
   padding: 2rem;
-  background-color: #005a87;
+  background-color: #202124;
 }
 
 .form h1 {
@@ -99,16 +99,16 @@
   background: #fff;
   border: 0px solid;
   outline-style: solid;
-  outline-color: #006ba1;
+  outline-color: #202124;
   font-size: 1rem;
 }
 
 .form-input-btn:hover {
   cursor: pointer;
-  background: #006ba1;
+  background: #202124;
   transition: all 0.4s ease-out;
+  color: white;
 }
-
 .form-input-login {
   font-size: 0.8rem;
   margin-top: 10px;

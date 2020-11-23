@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container } from "react-bootstrap";
 import NewLeadForm from "./NewLeadForm";
 import "./LeadsPanel.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LeadsPanel = () => {
   const [showNewLeadForm, setShowNewLeadForm] = React.useState(false);
@@ -12,6 +14,17 @@ const LeadsPanel = () => {
   return (
     <>
       <Container>
+        <ToastContainer
+          position="bottom-left"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         {showNewLeadForm ? (
           <NewLeadForm
             setShowNewLeadForm={setShowNewLeadForm}
@@ -28,7 +41,7 @@ const LeadsPanel = () => {
               variant="primary"
             >
               {" "}
-              Novo Lead
+              Novo Lead (+)
             </Button>
 
             <Table striped bordered size="lg">

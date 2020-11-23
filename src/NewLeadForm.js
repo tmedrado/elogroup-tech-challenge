@@ -2,8 +2,10 @@ import React from "react";
 import "./LeadsPanel.css";
 import Table from "react-bootstrap/Table";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Col, Row, Button } from "react-bootstrap";
+import { Col, Row, Button, Alert } from "react-bootstrap";
 import Checkbox from "./Checkbox";
+import validateNewLeadInfo from "./validateNewLeadInfo";
+import { toast } from "react-toastify";
 
 const NewLeadForm = ({ setShowNewLeadForm, setLeads, leads }) => {
   const [newLead, setNewLead] = React.useState({ step: 1 });
@@ -15,6 +17,19 @@ const NewLeadForm = ({ setShowNewLeadForm, setLeads, leads }) => {
       { id: 4, value: "BPM", isChecked: false },
     ],
   });
+  const [errors, setErrors] = React.useState({});
+  const notify = () => toast.success("Lead Cadastrado Com Sucesso!🚀");
+
+  const checkCheckboxes = () => {
+    let checked = false;
+    let projects = projectTypes.projects;
+    projects.forEach((project) => {
+      if (project.isChecked === true) {
+        checked = true;
+      }
+    });
+    return checked;
+  };
 
   const handleAllChecked = (event) => {
     let projects = projectTypes.projects;
@@ -35,7 +50,6 @@ const NewLeadForm = ({ setShowNewLeadForm, setLeads, leads }) => {
       <div>
         <h3>New Lead </h3>
       </div>
-
       <Row>
         <Col>
           <div className="form-inputs">
@@ -47,6 +61,7 @@ const NewLeadForm = ({ setShowNewLeadForm, setLeads, leads }) => {
                 setNewLead({ ...newLead, name: event.target.value })
               }
             />
+            {errors.name && <p>{errors.name}</p>}
           </div>
           <div className="form-inputs">
             <label className="form-label">Telefone *</label>
@@ -59,6 +74,7 @@ const NewLeadForm = ({ setShowNewLeadForm, setLeads, leads }) => {
                 setNewLead({ ...newLead, tel: event.target.value })
               }
             />
+            {errors.tel && <p>{errors.tel}</p>}
           </div>
           <div className="form-inputs">
             <label className="form-label">Email *</label>
@@ -71,11 +87,13 @@ const NewLeadForm = ({ setShowNewLeadForm, setLeads, leads }) => {
                 setNewLead({ ...newLead, email: event.target.value })
               }
             />
+            {errors.email && <p>{errors.email}</p>}
           </div>
         </Col>
         <Col>
           <div className="table-content">
             <h5>Oportunidades *</h5>
+
             <Table striped bordered hover size="sm">
               <thead>
                 <tr>
@@ -103,9 +121,15 @@ const NewLeadForm = ({ setShowNewLeadForm, setLeads, leads }) => {
 
             <Button
               onClick={() => {
-                setLeads(leads.concat(newLead));
-                setShowNewLeadForm(false);
-                console.log(newLead);
+                setErrors(validateNewLeadInfo(newLead));
+                if (
+                  (!Object.keys(validateNewLeadInfo(newLead)).length > 0) &
+                  checkCheckboxes()
+                ) {
+                  setLeads(leads.concat(newLead));
+                  setShowNewLeadForm(false);
+                  notify();
+                }
               }}
               variant="primary"
               size="lg"
