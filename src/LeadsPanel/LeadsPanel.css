@@ -1,0 +1,31 @@
+.container {
+  padding: 50px;
+}
+.logo-div {
+  width: 100%;
+  padding: 2rem;
+  background-color: #202124;
+  text-align: center;
+}
+
+#button {
+  margin-bottom: 20px;
+  margin-top: 3rem;
+}
+.panel-and-leadsform-title {
+  text-align: center;
+  padding-top: 2.1rem;
+}
+
+.lead-form-container {
+  margin: 100px auto;
+  width: 1200px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 600px;
+  padding: 4rem;
+}
+
+.form-content {
+  margin-top: 3rem;
+}

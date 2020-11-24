@@ -4,10 +4,9 @@
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
-  height: 600px;
+  height: 650px;
   display: grid;
 }
-
 .close-btn {
   position: absolute;
   top: 2%;
@@ -48,7 +47,7 @@
   width: 100%;
   margin: 0rem 3rem 3rem 3rem;
   padding: 2rem;
-  background-color: #005a87;
+  background-color: #202124;
 }
 
 .form h1 {
@@ -65,8 +64,9 @@
 }
 
 .form-inputs p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
   color: #f00e0e;
 }
 
@@ -99,16 +99,17 @@
   background: #fff;
   border: 0px solid;
   outline-style: solid;
-  outline-color: #006ba1;
-  font-size: 1rem;
+  outline-color: #202124;
+  font-size: 1.1rem;
 }
 
 .form-input-btn:hover {
   cursor: pointer;
-  background: #006ba1;
+  background: #202124;
+  outline: none;
   transition: all 0.4s ease-out;
+  color: white;
 }
-
 .form-input-login {
   font-size: 0.8rem;
   margin-top: 10px;
